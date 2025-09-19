@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lists</title>
+</head>
+
+<body>
+    <h2>HTML Lists</h2>
+
+    <h3>What are Lists in HTML?</h3>
+    <p>In HTML, lists are used to group related items together. They make information easier to read and organize. Lists
+        can be ordered (numbered), unordered (bulleted), or descriptive (term-definition).</p>
+
+    <h3>Types of Lists in HTML</h3>
+    <p><b>1. Unordered Lists (&lt;ul&gt;&lt;/ul&gt;)</b></p>
+    <ul>
+        <li>Displays items with bullets by default.</li>
+        <li>Best for lists where the order doesn't matter.</li>
+    </ul>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Example Code</th>
+                <th>Example Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <pre>
+                            <code>
+    &lt;ul&gt;
+        &lt;li&gt;Coffee&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Milk&lt;/li&gt;
+    &lt;/ul&gt;
+                            </code>
+                        </pre>
+                </td>
+                <td>
+                    <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><b>2. Ordered Lists (&lt;ol&gt;&lt;/ol&gt;)</b></p>
+    <ul>
+        <li>Displays items with numbers or letters.</li>
+        <li>Best for step-by-step instructions or rankings.</li>
+    </ul>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Example Code</th>
+                <th>Example Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <pre>
+                            <code>
+    &lt;ol&gt;
+        &lt;li&gt;Wake up&lt;/li&gt;
+        &lt;li&gt;Brush teeth&lt;/li&gt;
+        &lt;li&gt;Eat breakfast&lt;/li&gt;
+    &lt;/ol&gt;
+                            </code>
+                        </pre>
+                </td>
+                <td>
+                    <ol>
+                        <li>Wake up</li>
+                        <li>Brush teeth</li>
+                        <li>Eat breakfast</li>
+                    </ol>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><b>3. Description Lists (&lt;dl&gt;&lt;/dl&gt;)</b></p>
+    <ul>
+        <li>Used to define terms and their descriptions.</li>
+        <li>
+            Contains:
+            <ul>
+                <li>&lt;dt&gt;&lt;/dt&gt; : Definition term</li>
+                <li>&lt;dd&gt;&lt;/dd&gt; : Definition description</li>
+            </ul>
+        </li>
+    </ul>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Example Code</th>
+                <th>Example Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <pre>
+                            <code>
+    &lt;dl&gt;
+       &lt;dt&gt;HTML&lt;/dt&gt;
+       &lt;dd&gt;- A markup language for creating webpages.lt;/dd&gt;
+       &lt;dt&gt;CSS&lt;/dt&gt;
+       &lt;dd&gt;- A stylesheet language for stylingwebpages.&lt;/dd&gt;
+       &lt;dt&gt;JavaScript&lt;/dt&gt;
+       &lt;dd&gt;- A programming language for addinginteractivity.&lt;/dd&gt;
+    &lt;/dl&gt;
+                            </code>
+                        </pre>
+                </td>
+                <td>
+                    <dl>
+                        <dt>HTML</dt>
+                        <dd>- A markup language for creating webpages.</dd>
+                        <dt>CSS</dt>
+                        <dd>- A stylesheet language for styling webpages.</dd>
+                        <dt>JavaScript</dt>
+                        <dd>- A programming language for adding interactivity.</dd>
+                    </dl>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Nested Lists</h3>
+    <ul>
+        <li>Lists can be placed inside other lists to create subcategories.</li>
+        <li>Useful for menus, outlines, and structured data.</li>
+    </ul>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Example Code</th>
+                <th>Example Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <pre>
+                            <code>
+    &lt;ul&gt;
+        &lt;li&gt;
+            Subjects
+            &lt;ol&gt;
+                &lt;li&gt;
+                    Science
+                    &lt;ul&gt;
+                        &lt;li&gt;Physics&lt;/li&gt;
+                        &lt;li&gt;Chemistry&lt;/li&gt;
+                        &lt;li&gt;Biology&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;Mathematics&lt;/li&gt;
+                &lt;li&gt;History&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+                            </code>
+                        </pre>
+                </td>
+                <td>
+                    <ul>
+                        <li>
+                            Subjects
+                            <ol>
+                                <li>
+                                    Science
+                                    <ul>
+                                        <li>Physics</li>
+                                        <li>Chemistry</li>
+                                        <li>Biology</li>
+                                    </ul>
+                                </li>
+                                <li>Mathematics</li>
+                                <li>History</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
