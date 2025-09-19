@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Media — video & audio</title>
+</head>
+<body>
+    <h1>HTML MEDIA</h1>
+
+    <h2>First Principle: The Web is More Than Text and Images</h2>
+    <p>The fundamental truth is that a webpage should be able to deliver any kind of content, not just static text and pictures. For years, this was a major problem. To play a video or audio file, browsers had to rely on third-party plugins like Adobe Flash, QuickTime, or Silverlight. This was inefficient, insecure, and inconsistent across different computers.</p>
+
+    <h2>The Core Problem</h2>
+    <p>How can we embed video and audio into a webpage in a <strong>standardized, native, and plugin-free</strong> way? We need a universal system that works on every modern browser, from a desktop PC to a mobile phone, without requiring the user to install anything extra.</p>
+
+    <h2>The Logical Solution: The HTML5 &lt;video&gt; and &lt;audio&gt; Tags</h2>
+    <p>The solution was to create dedicated HTML tags whose sole purpose is to embed and control media.</p>
+
+    <hr>
+
+    <h3>Part 1: The Basics - Getting a Video on the Page</h3>
+    <p>The star of the show is the &lt;video&gt; tag. At its simplest, it just needs to know the source of the video file.</p>
+    <p><em>This is the most basic implementation</em></p>
+    <pre>&lt;!-- This is the most basic implementation --&gt;
+&lt;video src="my-awesome-video.mp4"&gt;&lt;/video&gt;</pre>
+
+    <p><strong>The Problem We Immediately Face:</strong> If you put this on a page, you'll just see the first frame of the video as a static image. You can't play it, pause it, or change the volume. It's not a video player; it's just a video frame.</p>
+
+    <p><strong>The Solution:</strong> We need to add player controls. The browser has a beautiful set of default controls built-in, and we can turn them on with a simple attribute.</p>
+
+    <h4>The controls Attribute: The Magic Switch</h4>
+    <p>The <code>controls</code> attribute is a <strong>boolean attribute</strong>. You don't need to set it to a value (controls="true" is unnecessary); its mere presence turns the feature on.</p>
+    <pre>&lt;video src="my-awesome-video.mp4" controls&gt;&lt;/video&gt;</pre>
+
+    <p><strong>Result:</strong> You now have a fully functional video player on your page, complete with a play/pause button, a timeline scrubber, volume controls, and a fullscreen option.</p>
+
+    <hr>
+
+    <h3>Part 2: Intermediate - Gaining More Control with Attributes</h3>
+    <p>Now that we have a player, how do we control its behavior and appearance? We use attributes.</p>
+    <ul>
+        <li><strong>width and height</strong>: Just like with an &lt;img&gt; tag, you can set the dimensions of the player.</li>
+        <li><strong>autoplay</strong>: This attribute will make the video start playing as soon as the page loads. <strong>CRITICAL:</strong> Modern browsers block autoplay with sound — use <code>muted</code> to allow autoplay.</li>
+        <li><strong>loop</strong>: Makes the video automatically restart when it finishes.</li>
+        <li><strong>poster</strong>: Specifies an image to display before the video is played (thumbnail).</li>
+    </ul>
+
+    <pre>&lt;video src="video.mp4" width="640" height="360" controls&gt;&lt;/video&gt;</pre>
+    <pre>&lt;!-- Autoplay muted example --&gt;
+&lt;video src="video.mp4" autoplay muted controls&gt;&lt;/video&gt;</pre>
+    <pre>&lt;video src="video.mp4" poster="images/video-thumbnail.jpg" controls&gt;&lt;/video&gt;</pre>
+
+    <hr>
+
+    <h3>Part 3: The &lt;audio&gt; Tag</h3>
+    <p>The &lt;audio&gt; tag works almost identically to the &lt;video&gt; tag, just without the visual component.</p>
+    <pre>&lt;p&gt;Listen to our theme song:&lt;/p&gt;
+&lt;audio src="audio/theme-song.mp3" controls&gt;&lt;/audio&gt;</pre>
+
+    <hr>
+
+    <h3>Part 4: Advanced &amp; Professional - Solving Real-World Problems</h3>
+    <h4>Problem #1: Not all browsers support the same video formats.</h4>
+    <p>The solution is to provide multiple formats using the &lt;source&gt; element.</p>
+    <pre>&lt;video controls poster="images/thumbnail.jpg"&gt;
+  &lt;source src="videos/my-video.webm" type="video/webm"&gt;
+  &lt;source src="videos/my-video.mp4" type="video/mp4"&gt;
+  Sorry, your browser doesn't support embedded videos.
+&lt;/video&gt;</pre>
+
+    <p>The <code>&lt;track&gt;</code> element adds captions/subtitles (WebVTT .vtt files).</p>
+    <pre>&lt;video controls&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;track src="captions_en.vtt" kind="captions" srclang="en" label="English"&gt;
+  &lt;track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Espa&ntilde;ol"&gt;
+&lt;/video&gt;</pre>
+
+    <hr>
+
+    <h3>Robust &amp; Professional Method (Multiple sources)</h3>
+    <pre>&lt;video width="320" height="240" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  &lt;source src="movie.ogg" type="video/ogg"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;</pre>
+
+    <h4>Comparison</h4>
+    <table border="1">
+        <tr>
+            <th>Feature</th>
+            <th>Example 1 (&lt;source&gt; method)</th>
+            <th>Example 2 (src method)</th>
+        </tr>
+        <tr>
+            <td>Browser Compatibility</td>
+            <td>Excellent — multiple formats</td>
+            <td>Good — single format only</td>
+        </tr>
+        <tr>
+            <td>Flexibility</td>
+            <td>High</td>
+            <td>Low</td>
+        </tr>
+        <tr>
+            <td>Simplicity</td>
+            <td>More complex</td>
+            <td>Very simple</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h3>Copyright Symbol</h3>
+    <p>You can use the entity name or entity number.</p>
+    <pre>&lt;footer&gt;
+    &lt;p&gt;Copyright &amp;copy; 2024 My Awesome Website. All Rights Reserved.&lt;/p&gt;
+&lt;/footer&gt;</pre>
+    <pre>&lt;footer&gt;
+    &lt;p&gt;Copyright &amp;#169; 2024 My Awesome Website. All Rights Reserved.&lt;/p&gt;
+&lt;/footer&gt;</pre>
+
+    <h3>Common Entities</h3>
+    <table border="1">
+        <tr><th>Symbol</th><th>Description</th><th>Entity Name</th><th>Entity Number</th></tr>
+        <tr><td>©</td><td>Copyright</td><td>&amp;copy;</td><td>&amp;#169;</td></tr>
+        <tr><td>®</td><td>Registered Trademark</td><td>&amp;reg;</td><td>&amp;#174;</td></tr>
+        <tr><td>™</td><td>Trademark</td><td>&amp;trade;</td><td>&amp;#8482;</td></tr>
+        <tr><td>&lt;</td><td>Less-than (for showing code)</td><td>&amp;lt;</td><td>&amp;#60;</td></tr>
+        <tr><td>&gt;</td><td>Greater-than (for showing code)</td><td>&amp;gt;</td><td>&amp;#62;</td></tr>
+        <tr><td>&amp;</td><td>Ampersand</td><td>&amp;amp;</td><td>&amp;#38;</td></tr>
+        <tr><td>"</td><td>Double Quote</td><td>&amp;quot;</td><td>&amp;#34;</td></tr>
+        <tr><td>€</td><td>Euro Sign</td><td>&amp;euro;</td><td>&amp;#8364;</td></tr>
+    </table>
+
+</body>
+</html>
