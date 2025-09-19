@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+<body>
+    <h1>HTML Tables</h1>
+    <ul>
+        <li>
+            <h3>Table tag &lt;table&gt;</h3>
+            <p>The &lt;table&gt; tag is used to create a table in HTML. It serves as a container for all the table
+                elements, including rows and cells.</p>
+            <p>Example:</p>
+            <pre>&lt;table&gt;
+    &lt;!-- Table content goes here --&gt;
+&lt;/table&gt;</pre>
+        </li>
+        <li>
+            <h3>Table header &lt;thead&gt;</h3>
+            <p>The &lt;thead&gt; tag is used to group the header content in a table. It typically contains the column
+                headers, which provide context for the data in the table.</p>
+            <p>Example:</p>
+            <pre>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Header 1&lt;/th&gt;
+            &lt;th&gt;Header 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+&lt;/table&gt;</pre>
+        </li>
+        <li>
+            <h3>Table body &lt;tbody&gt;</h3>
+            <p>The &lt;tbody&gt; tag is used to group the main content of a table. It contains the actual data rows of the
+                table.</p>
+            <p>Example:</p>
+            <pre>&lt;table&gt;
+    &lt;tbody&gt;
+        &lt;!-- Table content goes here --&gt;
+    &lt;/tbody&gt;
+&lt;table&gt;</pre>
+        <li>
+            <h3>Table row &lt;tr&gt;</h3>
+            <p>The &lt;tr&gt; tag is used to define a row in a table. Each row contains one or more table cells, which can
+                be either header cells (&lt;th&gt;) or data cells (&lt;td&gt;).</p>
+            <p>Example:</p>
+            <pre>&lt;table&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;!-- Table content goes here --&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;table&gt;
+        </li>
+        <li>
+            <h3>Table footer &lt;tfoot&gt;</h3>
+            <p>The &lt;tfoot&gt; tag is used to group the footer content in a table. It typically contains summary
+                information or totals for the columns in the table.</p>
+            <p>Example:</p>
+            <pre>&lt;table&gt;
+    &lt;tfoot&gt;
+        &lt;!-- Table content goes here --&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</pre>
+        </li>
+        <li>
+            <h3>Table data &lt;td&gt;</h3>
+            <p>The &lt;td&gt; tag is used to define a standard data cell in a table. It contains the actual data for the
+                corresponding row and column.</p>
+            <p>Example:</p>
+            <pre>&lt;table&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Data 1&lt;/td&gt;
+            &lt;td&gt;Data 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;table&gt;
+        </li>
+        <li>
+            <h3>Complete Table Example</h3>
+            <p>Here is a complete example of an HTML table using all the tags mentioned above:</p>
+            <pre>&lt;table border = "1"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Header 1&lt;/th&gt;
+            &lt;th&gt;Header 2&lt;/th&gt;
+            &lt;th&gt;Header 3&lt;/th&gt;
+        &lt;tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Data 1&lt;/td&gt;
+            &lt;td&gt;Data 2&lt;/td&gt;
+            &lt;td&gt;Data 3&lt;/td&gt;
+        &lt;tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Data 4&lt;/td&gt;
+            &lt;td&gt;Data 5&lt;/td&gt;
+            &lt;td&gt;Data 6&lt;/td&gt;
+        &lt;tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Footer 1&lt;/td&gt;
+            &lt;td&gt;Footer 2&lt;/td&gt;
+            &lt;td&gt;Footer 3&lt;/td&gt;
+        &lt;tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</pre>
+            
+            <br></br>
+
+            And the table above looks like this:<br><br>
+            <table border = "1">
+                <thead>
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                        <th>Header 3</th>
+                    <tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                        <td>Data 3</td>
+                    <tr>
+                    <tr>
+                        <td>Data 4</td>
+                        <td>Data 5</td>
+                        <td>Data 6</td>
+                    <tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Footer 1</td>
+                        <td>Footer 2</td>
+                        <td>Footer 3</td>
+                    <tr>
+                </tfoot>
+            </table>
+        </li>
+    </ul>
+</body>
+</html>
