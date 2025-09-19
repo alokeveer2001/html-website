@@ -6,6 +6,18 @@
     <title>HTML Forms</title>
 </head>
 <body>
+    <nav>
+        <h3>Navigation</h3>
+        <a href="index.html">Home</a> |
+        <a href="introduction.html">Introduction</a> |
+        <a href="lists.html">Lists</a> |
+        <a href="tables.html">Tables</a> |
+        <a href="files.html">Files</a> |
+        <a href="forms.html">Forms</a> |
+        <a href="media.html">Media</a>
+        <hr>
+    </nav>
+    
     <h1>HTML Forms</h1>
     <ul>
         <li>
@@ -279,6 +291,170 @@
                 <li><b>color</b>: Provides a color picker for selecting colors.</li>
             </ul>
         </li>
+    </ul>
+
+    <hr>
+    <h2>Complete Form Example - Consolidating All Concepts</h2>
+    <p>Below is a comprehensive form that demonstrates all the form concepts covered above:</p>
+
+    <h3>Code:</h3>
+    <pre>&lt;form action="#" method="post"&gt;
+    &lt;!-- Basic Text Input with Label --&gt;
+    &lt;label for="fullName"&gt;Full Name:&lt;/label&gt;
+    &lt;input type="text" id="fullName" name="fullName" required&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- Email Input --&gt;
+    &lt;label for="userEmail"&gt;Email Address:&lt;/label&gt;
+    &lt;input type="email" id="userEmail" name="userEmail" required&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- URL Input --&gt;
+    &lt;label for="website"&gt;Website URL:&lt;/label&gt;
+    &lt;input type="url" id="website" name="website"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- Number Input --&gt;
+    &lt;label for="age"&gt;Age:&lt;/label&gt;
+    &lt;input type="number" id="age" name="age" min="1" max="120"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- Date Input --&gt;
+    &lt;label for="birthdate"&gt;Birth Date:&lt;/label&gt;
+    &lt;input type="date" id="birthdate" name="birthdate"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- Color Input --&gt;
+    &lt;label for="favoriteColor"&gt;Favorite Color:&lt;/label&gt;
+    &lt;input type="color" id="favoriteColor" name="favoriteColor"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- Radio Buttons --&gt;
+    &lt;label&gt;Gender:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="male" name="gender" value="male"&gt;
+    &lt;label for="male"&gt;Male&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="female" name="gender" value="female"&gt;
+    &lt;label for="female"&gt;Female&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="other" name="gender" value="other"&gt;
+    &lt;label for="other"&gt;Other&lt;/label&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- Checkboxes --&gt;
+    &lt;label&gt;Interests:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="checkbox" id="sports" name="interests" value="sports"&gt;
+    &lt;label for="sports"&gt;Sports&lt;/label&gt;&lt;br&gt;
+    &lt;input type="checkbox" id="music" name="interests" value="music"&gt;
+    &lt;label for="music"&gt;Music&lt;/label&gt;&lt;br&gt;
+    &lt;input type="checkbox" id="technology" name="interests" value="technology"&gt;
+    &lt;label for="technology"&gt;Technology&lt;/label&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- Dropdown Select --&gt;
+    &lt;label for="education"&gt;Education Level:&lt;/label&gt;
+    &lt;select id="education" name="education"&gt;
+        &lt;option value=""&gt;--Select your education level--&lt;/option&gt;
+        &lt;option value="highschool"&gt;High School&lt;/option&gt;
+        &lt;option value="bachelor"&gt;Bachelor's Degree&lt;/option&gt;
+        &lt;option value="master"&gt;Master's Degree&lt;/option&gt;
+        &lt;option value="phd"&gt;PhD&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- Textarea --&gt;
+    &lt;label for="bio"&gt;Tell us about yourself:&lt;/label&gt;&lt;br&gt;
+    &lt;textarea id="bio" name="bio" rows="5" cols="50" placeholder="Write a brief description about yourself..."&gt;&lt;/textarea&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- Submit Button --&gt;
+    &lt;button type="submit"&gt;Submit Registration&lt;/button&gt;
+    &lt;button type="reset"&gt;Reset Form&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+    <h3>Output:</h3>
+    <form action="#" method="post">
+        <!-- Basic Text Input with Label -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+        <br><br>
+
+        <!-- Email Input -->
+        <label for="userEmail">Email Address:</label>
+        <input type="email" id="userEmail" name="userEmail" required>
+        <br><br>
+
+        <!-- URL Input -->
+        <label for="website">Website URL:</label>
+        <input type="url" id="website" name="website">
+        <br><br>
+
+        <!-- Number Input -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" max="120">
+        <br><br>
+
+        <!-- Date Input -->
+        <label for="birthdate">Birth Date:</label>
+        <input type="date" id="birthdate" name="birthdate">
+        <br><br>
+
+        <!-- Color Input -->
+        <label for="favoriteColor">Favorite Color:</label>
+        <input type="color" id="favoriteColor" name="favoriteColor">
+        <br><br>
+
+        <!-- Radio Buttons -->
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        <br><br>
+
+        <!-- Checkboxes -->
+        <label>Interests:</label><br>
+        <input type="checkbox" id="sports" name="interests" value="sports">
+        <label for="sports">Sports</label><br>
+        <input type="checkbox" id="music" name="interests" value="music">
+        <label for="music">Music</label><br>
+        <input type="checkbox" id="technology" name="interests" value="technology">
+        <label for="technology">Technology</label>
+        <br><br>
+
+        <!-- Dropdown Select -->
+        <label for="education">Education Level:</label>
+        <select id="education" name="education">
+            <option value="">--Select your education level--</option>
+            <option value="highschool">High School</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="phd">PhD</option>
+        </select>
+        <br><br>
+
+        <!-- Textarea -->
+        <label for="bio">Tell us about yourself:</label><br>
+        <textarea id="bio" name="bio" rows="5" cols="50" placeholder="Write a brief description about yourself..."></textarea>
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Registration</button>
+        <button type="reset">Reset Form</button>
+    </form>
+
+    <h3>Key Features Demonstrated:</h3>
+    <ul>
+        <li><b>Labels and IDs:</b> Each input is properly labeled with the `for` attribute connecting to the input's `id`</li>
+        <li><b>Name Attributes:</b> All inputs have `name` attributes for form submission</li>
+        <li><b>HTML5 Input Types:</b> email, url, number, date, and color inputs with built-in validation</li>
+        <li><b>Radio Buttons:</b> Grouped by the same `name` attribute for single selection</li>
+        <li><b>Checkboxes:</b> Multiple selections allowed for interests</li>
+        <li><b>Dropdown Select:</b> Provides multiple options in a compact format</li>
+        <li><b>Textarea:</b> Multi-line text input for longer content</li>
+        <li><b>Button Elements:</b> Submit and reset buttons for form interaction</li>
+        <li><b>Validation:</b> Required fields and input constraints (min/max values)</li>
+        <li><b>Placeholder Text:</b> Helpful hints for users</li>
     </ul>
 </body>
 </html>
